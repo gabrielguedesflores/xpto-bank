@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
+import StageUserData from './components/StageUserData'
 import { AppState } from './dto/App..dto';
 import './App.css'
 
@@ -12,7 +13,11 @@ class App extends Component<{}, AppState> {
   }
 
   handleClick = () => {
-    this.setState({ step: 1 });
+    this.setState(prevState => ({ step: prevState.step + 1 }));
+  }
+
+  handleBackClick = () => {
+    this.setState(prevState => ({ step: prevState.step - 1 }));
   }
 
   render() {
@@ -21,16 +26,27 @@ class App extends Component<{}, AppState> {
       <div className="App">
         <header className="App-header">
           {step === 0 && <Home />}
-          {step === 1 && <div>Etapa 1 do formulário</div>}
+          {step === 1 && <StageUserData />}
           {step === 2 && <div>Etapa 2 do formulário</div>}
           {/* adicione mais etapas aqui */}
-          <button 
-            id="create-account" 
-            className="btn btn-lg btn-secondary fw-bold border-white bg-dark"
-            onClick={this.handleClick}
-          >
-            Criar uma conta
-          </button>
+          <div>
+            {step > 0 && (
+              <button
+                id="back"
+                className="btn btn-lg btn-secondary me-2 fw-bold border-white bg-dark"
+                onClick={this.handleBackClick}
+              >
+                Voltar
+              </button>
+            )}
+            <button 
+              id="create-account" 
+              className="btn btn-lg btn-secondary fw-bold border-white bg-dark"
+              onClick={this.handleClick}
+            >
+              Avançar
+            </button>
+          </div>
         </header>
       </div>
     );
