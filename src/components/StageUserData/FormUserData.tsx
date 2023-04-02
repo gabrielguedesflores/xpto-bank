@@ -1,36 +1,60 @@
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+import { useState } from 'react';
+import './FormUserData.css';
 
 function FormUserData() {
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [cpf, setCpf] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log('Form submitted');
+    // Adicione aqui o código para enviar os dados do formulário
+  }
+
   return (
-    <Form>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridName">
-          <Form.Label>Nome</Form.Label>
-          <Form.Control type="text" placeholder="Digite seu nome" />
-        </Form.Group>
+    <form onSubmit={handleSubmit} className="form">
+      <label htmlFor="name">Nome:</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Digite seu nome"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+      />
 
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Senha</Form.Label>
-          <Form.Control type="password" placeholder="Digite sua senha" />
-        </Form.Group>
-      </Row>
+      <label htmlFor="password">Senha:</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Digite sua senha"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
 
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridCpf">
-          <Form.Label>CPF</Form.Label>
-          <Form.Control type="text" placeholder="Digite seu CPF" />
-        </Form.Group>
+      <label htmlFor="cpf">CPF:</label>
+      <input
+        type="text"
+        id="cpf"
+        placeholder="Digite seu CPF"
+        value={cpf}
+        onChange={(e) => setCpf(e.target.value)}
+        required
+      />
 
-        <Form.Group as={Col} controlId="formGridDateBirth">
-          <Form.Label>Data de Nascimento</Form.Label>
-					<Form.Control type="date" />
-        </Form.Group>
+      <label htmlFor="dateOfBirth">Data de Nascimento:</label>
+      <input
+        type="date"
+        id="dateOfBirth"
+        value={dateOfBirth}
+        onChange={(e) => setDateOfBirth(e.target.value)}
+        required
+      />
 
-      </Row>
-    </Form>
+    </form>
   );
 }
 

@@ -12,15 +12,14 @@ const CoverExample: React.FC = () => {
 				<p className="lead">
 					Preencha os dados abaixo
 				</p>
-				
-				<div style={{ width: '30%', margin: '0 auto', marginTop: '-25px'}}>
+				{/* <div style={{ width: '15%', margin: '0 auto', marginTop: '-25px'}}>
           <Lottie 
             animationData={animationData}
             loop={true}
             autoplay={true}
             rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
           />
-        </div>
+        </div> */}
 				<FormUserData /> 
 			</main>
 		</div>
