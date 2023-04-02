@@ -14,47 +14,49 @@ function FormUserData() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="form">
-      <label htmlFor="name">Nome:</label>
-      <input
-        type="text"
-        id="name"
-        placeholder="Digite seu nome"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
+    <div className="d-flex justify-content-center align-items-center">
+      <form onSubmit={handleSubmit} className="form">
+        <label htmlFor="name">Nome:</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Digite seu nome"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
 
-      <label htmlFor="password">Senha:</label>
-      <input
-        type="password"
-        id="password"
-        placeholder="Digite sua senha"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
+        <label htmlFor="password">Senha:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Digite sua senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
 
-      <label htmlFor="cpf">CPF:</label>
-      <input
-        type="text"
-        id="cpf"
-        placeholder="Digite seu CPF"
-        value={cpf}
-        onChange={(e) => setCpf(e.target.value)}
-        required
-      />
+        <label htmlFor="cpf">CPF:</label>
+        <input
+          type="text"
+          id="cpf"
+          placeholder="Digite seu CPF"
+          value={cpf}
+          onChange={(e) => setCpf(e.target.value)}
+          required
+        />
 
-      <label htmlFor="dateOfBirth">Data de Nascimento:</label>
-      <input
-        type="date"
-        id="dateOfBirth"
-        value={dateOfBirth}
-        onChange={(e) => setDateOfBirth(e.target.value)}
-        required
-      />
+        <label htmlFor="dateOfBirth">Data de Nascimento:</label>
+        <input
+          type="date"
+          id="dateOfBirth"
+          value={dateOfBirth}
+          onChange={(e) => setDateOfBirth(e.target.value)}
+          required
+        />
 
-    </form>
+      </form>
+    </div>
   );
 }
 

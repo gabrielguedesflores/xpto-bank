@@ -93,7 +93,7 @@ class App extends Component<{}, AppState> {
             )}
             
 
-            <div className="carousel-indicators">
+            <div className="carousel-indicators d-flex flex-wrap">
               <button type="button" data-bs-target="" aria-label="Slide 1" aria-current={step === 0 ? "true" : "false"} className={step === 0 ? "active" : ""}></button>
               <button type="button" data-bs-target="" aria-label="Slide 2" aria-current={step === 1 ? "true" : "false"} className={step === 1 ? "active" : ""}></button>
               <button type="button" data-bs-target="" aria-label="Slide 3" aria-current={step === 2 ? "true" : "false"} className={step === 2 ? "active" : ""}></button>

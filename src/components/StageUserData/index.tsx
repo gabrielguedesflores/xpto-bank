@@ -12,8 +12,8 @@ const CoverExample: React.FC = () => {
         <p className="lead">
           Preencha os dados abaixo
         </p>
-        <div className="row">
-          <div className="col-md-6 d-flex align-items-center justify-content-center" style={{marginTop: '-15px'}}>
+        <div className="row flex-column flex-md-row">
+          <div className="col-md-6 order-first order-last mb-3 mb-md-0 d-flex align-items-center justify-content-center" style={{marginTop: '-15px'}}>
             <Lottie 
               animationData={animationData}
               loop={true}
@@ -23,7 +23,7 @@ const CoverExample: React.FC = () => {
               rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 order-first order-last">
             <FormUserData /> 
           </div>
         </div>
