@@ -15,23 +15,27 @@ const CoverExample: React.FC = () => {
   return (
     <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <main className="px-3">
-        <h1>Adicione sua melhor foto</h1>
-        <p className="lead">
-          Preencha os dados abaixo
-        </p>
-        <label htmlFor="file-upload" className="btn btn-lg btn-secondary fw-bold border-white bg-dark">
-          <span>{isUploaded ? "Arquivo Anexado" : "Adicione sua foto aqui"}</span>
-          {isUploaded && <i className="bi bi-check-circle-fill ms-2"></i>}
-        </label>
-        <input type="file" id="file-upload" className="visually-hidden" onChange={handleUploadClick} />
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <h1>Adicione sua melhor foto</h1>
+          <p className="lead">
+            Preencha os dados abaixo
+          </p>
+          <label htmlFor="file-upload" className="btn btn-lg btn-secondary fw-bold border-white bg-dark">
+            <span>{isUploaded ? "Arquivo Anexado" : "Adicione sua foto aqui"}</span>
+            {isUploaded && <i className="bi bi-check-circle-fill ms-2"></i>}
+          </label>
+          <input type="file" id="file-upload" className="visually-hidden" onChange={handleUploadClick} />
 
-        <div style={{ width: '35%', margin: '0 auto', marginTop: '-25px'}}>
-          <Lottie 
-            animationData={animationData}
-            loop={true}
-            autoplay={true}
-            rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
-          />
+          <div className="d-flex justify-content-center mt-3">
+            <div className="col-12 col-md-6 col-lg-4">
+              <Lottie 
+                animationData={animationData}
+                loop={true}
+                autoplay={true}
+                rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+              />
+            </div>
+          </div>
         </div>
       </main>
     </div>

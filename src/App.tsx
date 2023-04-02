@@ -74,38 +74,36 @@ class App extends Component<{}, AppState> {
           {step === 4 && <End />}
 
           <div className="d-flex justify-content-between align-items-center mb-3">
-  {step > 0 && step < 3 && (
-    <button
-      id="back"
-      className="btn btn-lg btn-secondary me-2 fw-bold border-white bg-dark"
-      onClick={this.handleBackClick}
-    >
-      Voltar
-    </button>
-  )}
+            {step > 0 && step < 3 && (
+              <button
+                id="back"
+                className="btn btn-lg btn-secondary me-2 fw-bold border-white bg-dark"
+                onClick={this.handleBackClick}
+              >
+                Voltar
+              </button>
+            )}
 
-  <div className="carousel-indicators d-flex">
-    <button type="button" data-bs-target="" aria-label="Slide 1" aria-current={step === 0 ? "true" : "false"} className={step === 0 ? "active" : ""}></button>
-    <button type="button" data-bs-target="" aria-label="Slide 2" aria-current={step === 1 ? "true" : "false"} className={step === 1 ? "active" : ""}></button>
-    <button type="button" data-bs-target="" aria-label="Slide 3" aria-current={step === 2 ? "true" : "false"} className={step === 2 ? "active" : ""}></button>
-    <button type="button" data-bs-target="" aria-label="Slide 4" aria-current={step === 3 ? "true" : "false"} className={step === 3 ? "active" : ""}></button>
-    <button type="button" data-bs-target="" aria-label="Slide 5" aria-current={step === 4 ? "true" : "false"} className={step === 4 ? "active" : ""}></button>
-  </div>
-
-  {step < 4 && (
-    <button
-      id="create-account" 
-      className="btn btn-lg btn-secondary fw-bold border-white bg-dark"
-      onClick={this.handleClick}
-    >
-      {step < 3 ? 'Avançar' : 'Concluir'}
-    </button>
-  )}
-</div>
-
-
+            {step < 4 && (
+              <button
+                id="create-account" 
+                className="btn btn-lg btn-secondary fw-bold border-white bg-dark"
+                onClick={this.handleClick}
+              >
+                {step < 3 ? 'Avançar' : 'Concluir'}
+              </button>
+            )}
+            
+          </div>
         </header>
-      </div>
+        <div className="carousel-indicators d-flex order-2">
+          <button type="button" data-bs-target="" aria-label="Slide 1" aria-current={step === 0 ? "true" : "false"} className={step === 0 ? "active" : ""}></button>
+          <button type="button" data-bs-target="" aria-label="Slide 2" aria-current={step === 1 ? "true" : "false"} className={step === 1 ? "active" : ""}></button>
+          <button type="button" data-bs-target="" aria-label="Slide 3" aria-current={step === 2 ? "true" : "false"} className={step === 2 ? "active" : ""}></button>
+          <button type="button" data-bs-target="" aria-label="Slide 4" aria-current={step === 3 ? "true" : "false"} className={step === 3 ? "active" : ""}></button>
+          <button type="button" data-bs-target="" aria-label="Slide 5" aria-current={step === 4 ? "true" : "false"} className={step === 4 ? "active" : ""}></button>
+        </div>
+    </div>
     );
   }
 }
