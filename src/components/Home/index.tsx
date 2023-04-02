@@ -1,7 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-//import animationData from '../../lottie/animations/f2e4bbf0-747a-4a3e-9dac-ff7f38982c5a.json';
-import animationData from '../../lottie/animations/08a47afd-7525-448e-9a8f-c45dbbad7857.json'
+import animationData from '../../lottie/animations/home.json'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const CoverExample: React.FC = () => {

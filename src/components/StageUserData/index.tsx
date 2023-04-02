@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
-//import animationData from '../../lottie/animations/f2e4bbf0-747a-4a3e-9dac-ff7f38982c5a.json';
-import animationData from '../../lottie/animations/08a47afd-7525-448e-9a8f-c45dbbad7857.json'
+import FormUserData from './FormUserData';
+import animationData from '../../lottie/animations/form.json'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const CoverExample: React.FC = () => {
@@ -12,7 +12,16 @@ const CoverExample: React.FC = () => {
 				<p className="lead">
 					Preencha os dados abaixo
 				</p>
-				<br />
+				
+				<div style={{ width: '30%', margin: '0 auto', marginTop: '-25px'}}>
+          <Lottie 
+            animationData={animationData}
+            loop={true}
+            autoplay={true}
+            rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+          />
+        </div>
+				<FormUserData /> 
 			</main>
 		</div>
 	);
